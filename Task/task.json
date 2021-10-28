@@ -1,0 +1,55 @@
+{
+    "id": "dc5b98de-d124-4a32-b69f-29d1d67d7f95",
+    "name": "JingetAzConf2021",
+    "friendlyName": "Jinget AzConf",
+    "description": "Connect to Elasticsearch using Azure DevOps Pipeline Extension",
+    "helpMarkDown": "More information: contact farahmandian2011@gmail.com",
+    "category": "Utility",
+    "author": "Vahid Farahmandian",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 0
+    },
+    "visibility": [
+        "Build",
+        "Release"
+    ],
+    "minimumAgentVersion": "1.0.0",
+    "instanceNameFormat": "Connect to Elasticsearch $(url)",
+    "groups": [
+        {
+            "name": "elasticOptions",
+            "displayName": "Elastic Search Options",
+            "isExpanded": false
+        }
+    ],
+    "inputs": [       
+        {
+            "name": "elasticUrl",
+            "type": "string",
+            "label": "Elastic URL",
+            "defaultValue": "",
+            "groupName":"elasticOptions"
+        },
+        {
+            "name": "elasticUsername",
+            "type": "string",
+            "label": "Elstic username",
+            "groupName":"elasticOptions"
+        },
+        {
+            "name": "elasticPassword",
+            "type": "string",
+            "label": "Elastic password",
+            "groupName":"elasticOptions"
+        }
+    ],
+    "execution": {
+        "PowerShell": {
+            "target": "$(currentDirectory)\\azconf.ps1",
+            "argumentFormat": "",
+            "workingDirectory": ""
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "JingetAzConf2021",
+    "name": "Connect to Elasticsearch",
+    "version": "0.0.1",
+    "publisher": "VahidFarahmandian",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Connec to Elasticsearch using Azure DevOps Pipeline Extensions",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "files": [
+        {
+            "path": "Task"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "JingetAzConf2021",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Task"
+            }
+        }
+    ]
+}
